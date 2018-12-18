@@ -1,0 +1,9 @@
+<!--pages/sort/sort.wxml-->
+<view class='sortbox'>
+
+  <view wx:for="{{sorttype}}" wx:key=""  bindtap='sorttype' data-sorttypeid='{{item.typeid}}' data-sortname='{{item.typetext}}' class='{{checktypeid==item.typeid?"active":""}}' >
+    <text>{{item.typetext}}</text>
+    <text class='check'>√</text>
+  </view>
+
+</view>

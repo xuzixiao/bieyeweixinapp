@@ -1,0 +1,118 @@
+/* pages/order/order.wxss */
+.order-tab{
+  width: 80%;
+  margin: 10px 10%;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 3px 3px 5px #e9e9e9;
+  height: 80rpx;
+  display: flex;
+  display: -webkit-flex;
+}
+.order-tab text{
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+.order-tab text.active{
+  background: #f54449;
+  color: #fff;
+}
+.order-item{
+  margin: 10px;
+  border:#e9e9e9 solid 1px;
+  padding: 0 5px;
+  border-radius: 5px;
+}
+.order-item .order-title{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: relative;
+}
+.villName{
+  display: block;
+  font-size: 28rpx;
+  width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.orderstatus{
+  width:37%;
+  height:30rpx;
+  position:absolute;
+  right:0px;
+  top:0px;
+  line-height:80rpx;
+  font-size:25rpx;
+  text-align:center;
+  color:#f54449;
+}
+.order-date{
+  font-size: 25rpx;
+}
+.order-date .zhi{
+  padding: 0 15rpx;
+}
+.order-paynum{
+  font-size: 25rpx;
+  line-height: 80rpx;
+}
+.nothave image{
+  display: block;
+  width:200rpx;
+  height: 200rpx;
+  margin: 20rpx auto; 
+  opacity: 0.6;
+}
+.nothave text{
+  display: block;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #f54449;
+}
+
+.section view text{
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+.orderlogo{
+  width: 100%;
+  height: 300rpx;
+  overflow: hidden;
+}
+.orderlogo image{
+  display: block;
+  width: 100%;
+}
+.loadmore{
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  text-align: center;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+}
+.loadmore text{
+  display:inline-block;
+  width: auto;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+.loadmore image{
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  margin: 20rpx 5rpx;
+  padding: 0px;
+}

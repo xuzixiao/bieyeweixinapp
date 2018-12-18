@@ -1,0 +1,158 @@
+.comment{
+  padding: 0 15rpx;
+}
+.comment-pro{
+  display: flex;
+}
+.pro-logo{
+  width: 30%;
+}
+.pro-logo image{
+  width: 200rpx;
+  height: 150rpx;
+}
+.comment-pro{
+  margin-top: 10rpx;
+  padding: 10rpx;
+  border-radius: 5rpx;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .3);
+}
+.pro-con text{
+  display: block;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  color:#666;
+}
+.pingfen{
+  margin-top: 20rpx;
+  padding: 10rpx;
+  border-radius: 5rpx;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .3);
+}
+.totalscore{
+  width: 300rpx;
+  height: 50rpx;
+  margin: 10rpx auto;
+}
+.fentit{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #666;
+}
+.ruzhupingfen{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+}
+.ruzhupingfen text{
+  font-size: 30rpx;
+  color: #666;
+}
+.comment-text{
+  margin-top: 15rpx;
+  padding:0rpx 10rpx 10rpx;
+  border-radius: 5rpx;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .3);
+}
+.title{
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+.ment{
+  width: 100%;
+  min-height: 340rpx;
+  background: #efefef;
+}
+.content{
+  width: 96%;
+  padding: 10rpx 2%;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  height: 240rpx;
+}
+.uploadimgs{
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom:10rpx;
+}
+.uploadimg,.uploadimgs image{
+  width: 100rpx;
+  height: 100rpx;
+  padding: 10rpx 0rpx 10rpx 10rpx;
+}
+.submit{
+  padding: 80rpx 0px; 
+}
+.submit button{
+  display: block;
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background: #f54449; 
+  color: #fff;
+  font-size: 30rpx;
+}
+.watchimgs{
+  display: flex;
+  position: fixed;
+  background: rgba(0, 0, 0, .8);
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow-y: scroll;
+  flex-wrap:wrap;
+}
+.watchimgs .imageitem{
+  position: relative;
+  width: 100%;
+  margin:5rpx 10rpx;
+}
+
+.watchimgs .imageitem image{
+width: 100%;
+}
+
+
+.delplimg image{
+  display: block;
+  width: 60rpx!important;
+  height: 60rpx!important;
+  margin: 20rpx!important;
+  float: left;
+}
+.delplimg{
+  width: 100rpx;
+  height: 100rpx;
+  background: rgba(0, 0, 0, .3);
+  border-radius: 50%;
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+}
+.closewatch{
+  position: fixed;
+  width: 200rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color:#fff;
+  background: #f54449;
+  left: 20rpx;
+  top: 20rpx;
+  border-radius: 10rpx;
+  z-index: 50;
+  font-size:32rpx;
+}
+
+
+
+
+
+

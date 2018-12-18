@@ -1,0 +1,54 @@
+<!--pages/login/login.wxml-->
+<view class='login'>
+
+<view class='tab'>
+  <view class='{{logintype==1?"active":""}}' data-logintype='1' bindtap='changetab'>未有账号，注册</view>
+  <view class='{{logintype==2?"active":""}}' data-logintype='2' bindtap='changetab'>已有账号，绑定手机号</view>
+</view>
+
+<view class='loginmain yzmgetin' wx:if="{{logintype==1}}">
+  <view class='loginline'>
+    <image src='../../static/images/icons/tel.svg'></image>
+    <input placeholder='请输入您的手机号' bindinput='tel'></input>
+  </view>
+
+  <view class='loginline'>
+    <image src='../../static/images/icons/yzm.svg'></image>
+    <input placeholder='输入手机验证码' bindinput='yzm'></input>
+    <button  class='code' bindtap='getyzm' disabled="{{getyzmstatus}}">{{getyzmtext}}</button>
+  </view>
+
+
+  <view class='loginline'>
+    <image src='../../static/images/icons/pwd.svg'></image>
+    <input type='password' placeholder='输入密码' bindinput='pwd' ></input>
+  </view>
+
+  <view class='loginline'>
+    <image src='../../static/images/icons/pwd.svg'></image>
+    <input type='password' placeholder='确认密码' bindinput='repwd'></input>
+  </view>
+
+
+</view>
+
+
+<view class='loginmain yzmgetin' wx:if="{{logintype==2}}">
+  <view class='loginline'>
+    <image src='../../static/images/icons/tel.svg'></image>
+    <input placeholder='请输入您的手机号' bindinput='bdyzmtel'></input>
+  </view>
+  <view class='loginline'>
+    <image src='../../static/images/icons/yzm.svg'></image>
+    <input placeholder='输入手机验证码' bindinput='bdyzm'></input>
+    <button  class='code' bindtap='bdgetyzm' disabled="{{bdgetyzmstatus}}">{{bdgetyzmtext}}</button>
+  </view>
+</view>
+
+
+
+<view class='loginIn'>
+  <button bindtap='reguser'>{{regtext}}</button>
+</view>
+
+</view>

@@ -1,0 +1,63 @@
+<!--pages/consult/consult.wxml-->
+<view class='zixun'>
+  <view class='zixun-top'>
+    <text>猜你想问</text>
+    <view class='zixun-top-main'>
+      <view bindtap='showdetail' data-id='2'>
+        <image src='/static/images/icons/dj1.svg'></image>
+        <text>预付订金</text>
+      </view>
+      <view bindtap='showdetail' data-id='12'>
+        <image src='/static/images/icons/gj2.svg'></image>
+        <text>联系管家</text>
+      </view>
+      <view bindtap='showdetail' data-id='13'>
+        <image src='/static/images/icons/piao3.svg'></image>
+        <text>开具发票</text>
+      </view>
+      <view bindtap='showdetail' data-id='9'>
+        <image src='/static/images/icons/sx4.svg'></image>
+        <text>办理入退手续</text>
+      </view>
+      <view bindtap='showdetail' data-id='10'>
+        <image src='/static/images/icons/pay5.svg'></image>
+        <text>如何支付</text>
+      </view>
+      <view bindtap='showdetail' data-id='4'>
+        <image src='/static/images/icons/order6.svg'></image>
+        <text>查询订单</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='talkwithtell'>
+    <button open-type="contact">在线沟通</button>
+    <button bindtap='calling'>拨打电话</button>
+  </view>
+
+
+  <view class='zixun-top'>
+    <text>常见问题</text>
+    <view class='alwayques'>
+      <text wx:for="{{question}}" wx:key="key" bindtap='showdetail' data-id='{{item.id}}'>{{item.q}}</text>
+
+
+
+    </view>
+  </view>
+</view>
+
+<view class='answer' wx-if="{{showdetail}}">
+  <view class='title'>
+    {{questext}}
+  </view>
+  <view class='answer-con'>
+    {{answertext}}
+  </view>
+  
+<view class='back-box'>
+  <button class='back' bindtap='back'>返回</button>
+</view>  
+
+
+</view>

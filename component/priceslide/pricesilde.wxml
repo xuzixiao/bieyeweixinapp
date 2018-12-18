@@ -1,0 +1,25 @@
+<!--component/priceslide/pricesilde.wxml-->
+<view class='pricesile'>
+
+<movable-area class="priceline">
+
+    <movable-view class='lefttap' bindtouchmove='lefttapmove' out-of-bounds='false'  bindtouchend='lefttap' x="{{left}}" direction='horizontal'>
+    <view class='leftline'></view>
+    </movable-view>
+    
+    <movable-view class='righttap' bindtouchmove='righttapmove' out-of-bounds='false' bindtouchend='righttap' x="{{right}}"  direction='horizontal'> 
+    <view class='rightline'></view>
+    </movable-view>
+    
+</movable-area>
+<view class='section'>
+        <text class='cur curstart'>￥0</text>
+        <text class='cur curend'>(￥1000)不限</text>
+    </view>
+  <view class='value'>
+    <text>房价区间：</text>
+    <text>￥{{leftx}}</text>
+    <text>~</text>
+    <text>￥{{rightx}}</text>
+  </view>
+</view>

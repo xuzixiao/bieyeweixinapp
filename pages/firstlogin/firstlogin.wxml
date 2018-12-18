@@ -1,0 +1,19 @@
+<view class='loginbox'>
+
+<view class='login-top'>
+<view class='logobox'>
+  <image src='/static/images/headimg.png' class="logo"></image>
+  <text>别野网</text>
+</view>
+</view>
+
+<view class='login-btm'>
+  <view class='logintip weight'>即将登陆小程序别野网，请确认是本人操作</view> 
+  <view class='logintip'><text> · </text>使用你的账号登陆该应用</view> 
+  <button type='button' class='loginbtn' open-type="getUserInfo" bindgetuserinfo="userinfor">微信授权登陆</button>
+</view>
+
+
+
+
+</view>

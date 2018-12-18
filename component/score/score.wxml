@@ -1,0 +1,16 @@
+<!--component/score/score.wxml-->
+<view class='score'>
+
+
+
+<view class='top'>
+  <image src='/static/images/icons/startcur.svg' wx:for="{{score}}" wx:key="" bindtap='scorefun' data-score='{{item}}'  ></image> 
+</view>
+
+<view class='start bottom'>
+  <image src='/static/images/icons/start.svg' wx:for="{{totalscore}}" wx:key=""  bindtap='scorefun' data-score='{{item}}'></image>
+</view>
+
+
+
+</view>

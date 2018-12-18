@@ -1,0 +1,43 @@
+<!--pages/select/select.wxml-->
+<view>
+  
+  <view class='selectlist'>
+    <view class='title'>户型</view>
+    <view class='selectmain'>
+      
+      <text wx:for="{{homenum}}" wx:key="" data-homenum='{{item.id}}' class='{{checkdate.homenum==item.id?"active":""}}' bindtap='checkhomenum' >{{item.typename}}</text>
+    </view>
+  </view>
+
+  <view class='selectlist'>
+    <view class='title'>房型</view>
+    <view class='selectmain'>
+<text wx:for="{{hometype}}" wx:key="" data-hometype='{{item.id}}' class='{{checkdate.hometype==item.id?"active":""}}' bindtap='checkhometype' >{{item.typename}}</text>
+    </view>
+  </view>
+
+
+<view class='selectlist'>
+    <view class='title'>人数</view>
+    <view class='selectmain choserennum'>
+     <text class='sub' bindtap='sub'>–</text>
+        <text class='peoplenum'>{{peopleinfor.peopledesc}}</text>
+     <text class='add' bindtap='add'>＋</text>
+    </view>
+  </view>
+
+<view class='selectlist room-price'>
+    <view class='title'>房价(选择区间)</view>
+    <view class='selectmain'>
+     <priceslide class="pricesilde"></priceslide>
+    </view>
+  </view>
+
+
+<view class='select-btn'>
+  <view class='clear' bindtap='clearcheck'>清空</view>
+  <view class='confim' bindtap='gosearch'>确认查看</view>
+</view>
+
+
+</view>

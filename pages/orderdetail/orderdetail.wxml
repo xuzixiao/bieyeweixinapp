@@ -1,0 +1,99 @@
+<!--pages/orderdetail/order.wxml-->
+<view class='orderdetail'>
+
+<view class="section">
+  <view class='setion'>订单编号：{{orderInfor.OrderNo}}</view>
+  <view class='setion'>
+    <text class='statustit'>当前状态：</text>
+    <text class='status'>{{orderInfor.OrderStateText}}</text>
+    <text class='comfigorder'>{{ordertipinfor}}</text>
+    <text class='comfigcuttime'>{{difftime}}</text>
+  </view>
+</view>
+
+  <view class='order-item section'>
+  
+<navigator url='/pages/detail/detail?detail={{product.ProductID}}'>
+  <view class='order-logo'>
+    <image src='{{product.Logo}}' mode="aspectFill"></image>
+  </view>
+    <view class='order-title'>
+      <text class='villName'>{{orderInfor.Name}}</text>
+      <text class='orderstatus'>{{orderInfor.OrderStateText}}</text>
+    </view>
+</navigator>
+    <view class='order-date'>
+      <text>{{orderInfor.StartTime}}</text>
+      <text class='zhi'>至</text>
+      <text>{{orderInfor.EndTime}}</text>
+      <text class='zhi'></text>
+      <text>共{{orderInfor.ReserveDays}}晚</text>
+    </view>
+    <view class='order-text'>订单总额：￥{{orderInfor.PayTotal}}</view>
+    <view class='order-text'>房东：
+      <text>别野网</text>
+    </view>
+    <view class='order-text'>房源地址：
+      <text>{{product.Desc}}</text>
+    </view>
+  </view>
+
+  <view class='section business'>
+    <view class='section-title'>交易详情</view>
+    <view>
+      <text>房费：</text>
+      <text>￥{{orderInfor.Rent}}</text>
+    </view>
+    <view>
+      <text>在线收取押金：</text>
+      <text>￥{{orderInfor.Deposit}}</text>
+    </view>
+  </view>
+
+  <view class='section'>
+    <view class='section-title'>入住人信息</view>
+    <view>
+      <text  class='order-text'>姓名：</text>
+      <text  class='order-text'>{{orderInfor.TenantName}}</text>
+    </view>
+    <view>
+      <text class='order-text'>手机号：</text>
+      <text class='order-text'>{{orderInfor.TenantMobile}}</text>
+    </view>
+    <view>
+      <text class='order-text'>身份证号：</text>
+      <text class='order-text'>{{orderInfor.TenantCardID}}</text>
+    </view>
+
+  </view>
+
+<view class='orderehand section' wx:if="{{orderInfor.OrderState>=70&&orderInfor.OrderState!=130}}">
+<view class='section-title'>订单操作</view>
+<view class='handsection'>
+    <button class='black'   wx:if="{{orderInfor.OrderState==70||orderInfor.OrderState==92}}"  bindtap='cancelorder'   >取消订单</button>
+    <button class='reg' bindtap='gopay' wx:if="{{orderInfor.OrderState==92}}">去支付</button>
+    <button class='black' bindtap='refund' wx:if="{{orderInfor.OrderState==100}}">申请退款</button>
+    <button class='reg' bindtap='gopay' wx:if="{{orderInfor.OrderState==94}}">重新支付</button>
+    
+    <button class='black' wx:if="{{orderInfor.OrderState==110}}" bindtap='cancelpay'>取消申请退款</button>
+    <button class='black' wx:if="{{orderInfor.OrderState==111}}" bindtap='cancelpay'>取消申请退房</button>
+    <button class='reg' wx:if="{{orderInfor.OrderState==200 &&orderInfor.DiscussState==0}}" bindtap='gocomment'>去评论</button>
+</view>
+</view>
+
+<view class='refundroom' wx:if="{{refundshow}}">
+  <view class='zhezhao'></view>
+  <view class='chosedate'>
+    <view class='refundtitle'>
+      <view>选择离开时间</view>
+      <view bindtap='closerefund'>关闭</view>
+    </view>
+    <view class='refunddate-main'>
+      <view wx:for="{{refunddatearr}}" wx:key="" data-refunddate='{{item}}' bindtap='taprefunddate'>{{item}}</view>
+    </view>
+  </view>
+</view>
+
+
+
+</view>

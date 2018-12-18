@@ -1,0 +1,107 @@
+/* pages/consult/consult.wxss */
+.zixun{
+  padding: 5px 10px;
+}
+.zixun-top>text{
+  font-size: 34rpx;
+  line-height: 80rpx;
+  text-align: left;
+  color: #444444;
+}
+.zixun-top-main{
+ display: block;
+ width: 100%;
+}
+.zixun-top-main view{
+  display: inline-block;
+  box-sizing: border-box;
+  width: 33.3%;
+  border-bottom:#eee solid 1px;
+  border-right: #eee solid 1px;
+}
+.zixun-top-main view:nth-child(3n){
+  border-right: none;
+}
+.zixun-top-main view:nth-child(4),.zixun-top-main view:nth-child(5),.zixun-top-main view:nth-child(6){
+  border-bottom: none;
+}
+.zixun-top-main view:nth-child(4) image,.zixun-top-main view:nth-child(5) image,.zixun-top-main view:nth-child(6) image{
+  margin-top: 15px!important;
+}
+.zixun-top-main view image{
+  display: block;
+  width: 70rpx;
+  height: 70rpx;
+  margin: 10px auto;
+}
+.zixun-top-main view text{
+  display: block;
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #444444;
+}
+.alwayques{
+  width: 100%;
+  height: auto;
+}
+.alwayques text{
+  display: inline-block;
+  line-height: 60rpx;
+  padding: 0px 10px;
+  border-radius: 40rpx;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .1);
+  margin: 0 10px 10px 0;
+  font-size: 30rpx;
+}
+.answer{
+  position: fixed;
+  width: 96%;
+  padding: 0 2%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: 999;
+  background: #fff;
+  overflow-y: scroll;
+  font-size: 34rpx;
+  line-height: 60rpx;
+}
+.title{
+  font-size:34rpx;
+  line-height: 60rpx;
+}
+.answer-con{
+  font-size: 30rpx;
+  line-height: 60rpx;
+  text-indent: 2em;
+}
+.back{
+  background: #f54449;
+  color: #fff;
+  width: 60%;
+  margin: 0 20%;
+  line-height: 80rpx;
+  height: 80rpx;
+}
+.talkwithtell{
+  width: 100%;
+  height: 60rpx;
+  padding: 20rpx 0px;
+  display: flex;
+}
+.talkwithtell button{
+  width: 40%;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #fff;
+  background: #f54449;
+}
+.back-box{
+  width: 100%;
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+}

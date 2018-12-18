@@ -1,0 +1,52 @@
+.loginbox{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background:#f0f1f5;
+}
+.login-top{
+  width: 100%;
+  height: 300rpx;
+  background: #fff;
+  box-shadow:4rpx 0rpx 4rpx rgba(0, 0, 0, .1);
+  display: flex;
+  justify-content:center ;
+}
+.logobox{
+  width: 150rpx;
+  height: 200rpx;
+  padding-top: 50rpx;
+  }
+.logobox image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 20rpx;
+}
+.logobox text{
+  display: block;
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 34rpx;
+  text-align: center;
+  color: #333;
+}
+.login-btm{
+  padding:10px;
+}
+.loginbtn{
+  background:#f54449;
+  color: #fff;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 20px 0px;
+}
+.logintip{
+  font-size: 30rpx;
+  color: #666;
+  line-height: 60rpx;
+}
+.weight{
+  font-size: 32rpx;
+  color: #333;
+}

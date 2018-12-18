@@ -1,0 +1,180 @@
+/* pages/orderdetail/order.wxss */
+.orderdetail{
+  padding:0px 10px 30px;
+}
+.setion{
+  width: 100%;
+  line-height: 60rpx;
+  font-size: 28rpx;
+}
+.orderstatus{
+  color:#f54449;
+}
+.section{
+  box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+  margin-top: 10px;
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+.section .order-title{
+  width: 100%;
+  height: 80rpx;
+  position: relative;
+}
+.section .villName{
+display:block;
+font-size: 34rpx;
+width: 66%;
+line-height: 80rpx;
+height: 80rpx;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+position: absolute;
+left: 0px;
+top: 0px;
+font-weight: bold;
+}
+.section .orderstatus{
+display:block;
+font-size:25rpx;
+width:36%;
+text-align:right;
+height:80rpx;
+line-height:80rpx;
+position:absolute;
+top:0px;
+right:0px;
+}
+.section .status{
+  position:unset;
+}
+.order-date{
+  font-size: 28rpx;
+  line-height: 60rpx;
+}
+.order-date .zhi{
+  margin: 0 10px;
+}
+.section .order-text{
+ font-size: 28rpx;
+ line-height: 60rpx;
+}
+.section-title{
+  font-size: 34rpx;
+  font-weight: bold;
+  line-height: 80rpx;
+}
+
+.orderehand{
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+.orderehand button{
+  display: inline-block;
+  text-align: center;
+  font-size: 34rpx;
+  line-height: 70rpx;
+  border: none;
+  background: #f54449;
+  color: #fff;
+  margin: 5px 10px;
+}
+.handsection{
+  display: flex;
+  display: -webkit-flex;
+  justify-content:center;
+}
+.handsection button{
+  flex-wrap:wrap ;
+}
+.cannotorder{
+  background: #666666!important;
+}
+.business text{
+  font-size: 28rpx;
+}
+.status{
+  color: #f54449!important;
+}
+.comfigorder{
+  display: block;
+  width: 100%;
+  line-height: 60rpx;
+  text-align: center;
+}
+.comfigcuttime{
+  display: block;
+  width: 100%;
+  color: #f54449;
+  text-align: center;
+}
+.order-logo{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.order-logo image{
+  width: 100%;
+}
+
+.refundroom{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 4;
+}
+.refundroom .zhezhao{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  background: rgba(0,0,0,.5);
+  z-index: 5;
+}
+.chosedate{
+  position: fixed;
+  width: 80%;
+  height: auto;
+  top:30%;
+  left: 8%;
+  padding: 2%;
+  background: #fff;
+  border-radius: 5px; 
+  z-index: 10;
+}
+.refunddate-main view{
+  width: 50%;
+  text-align: center;
+  padding: 10rpx 0px;
+  font-size: 30rpx;
+}
+.refundtitle{
+  display:flex;
+  display: -webkit-flex;
+  width: 100%;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  margin-top: -10rpx;
+  justify-content:space-between;
+  }
+.refunddate-main{
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap:wrap;
+}
+.refundtitle view{
+  display: block;
+  padding-right: 10rpx;
+}
+.reg{
+  background: #f54449!important;
+}
+.black{
+  background: #545454!important;
+}

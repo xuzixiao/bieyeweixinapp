@@ -1,0 +1,13 @@
+/* pages/servicetext/servicetext.wxss */
+.xieyi{
+  padding: 0 10rpx;
+}
+.xieyi>text{
+font-size: 30rpx;
+text-align: center;
+}
+.xieyi>view{
+  font-size: 26rpx;
+  line-height: 60rpx;
+  color:#333;
+}

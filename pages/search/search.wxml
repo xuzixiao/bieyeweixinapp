@@ -1,0 +1,39 @@
+<!--pages/search/search.wxml-->
+<view class='searchHead'>
+    <view bindtap='choosedate'><text>{{searchdate}}</text><i class="tap"></i></view>
+    <view bindtap='address'><text>{{searchcity}}</text><i class="tap"></i></view>
+    <view bindtap='sort'><text>{{searchpx}}</text><i class="tap"></i></view>
+    <view bindtap='select'><text>筛选</text><i class="tap"></i></view>
+</view>
+
+<scroll-view class="searchBox"  scroll-y="true">
+<navigator url='/pages/detail/detail?detail={{item.ProductID}}' wx:for="{{villalist}}" wx:key="key">
+    <view class='villa-list'>
+      <view class='villa-Logo'>
+          <image src='{{item.zipLogo}}' mode="widthFix" data-src='{{item.Logo}}'></image>
+          <text class='price'>￥{{item.Price}}</text>
+      </view>
+      <view class='villa-title'>
+          <text class='title'>{{item.Name}}</text>
+          <text class='tag'>{{item.BedRoom}}室{{item.BathRoom}}卫</text>
+      </view>
+    </view>
+</navigator>
+</scroll-view>
+
+<view class='nothave' wx:if="{{nothave}}">
+  <image src='../../static/images/icons/villa.svg'></image>
+  <text>暂无此类别墅</text>
+</view>
+
+
+<view class='loadmore' wx:if='{{loadHidden&&!nothave}}'>
+  <image src='../../static/images/icons/loading.gif'></image>
+  <text>加载更多</text>
+</view>
+
+<view class='loadmore' wx:if='{{!loadHidden&&!nothave}}'>
+  <text>已加载全部</text>
+</view>
+
+

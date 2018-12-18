@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/order/order",
+    "pages/my/my",
+    "pages/consult/consult",
+    "pages/address/address",
+    "pages/date/date",
+    "pages/chosedate/chosedate",
+    "pages/search/search",
+    "pages/sort/sort",
+    "pages/select/select",
+    "pages/detail/detail",
+    "pages/comment/comment",
+    "pages/orderdetail/orderdetail",
+    "pages/ordercreat/ordercreat",
+    "pages/servicetext/servicetext",
+    "pages/login/login",
+    "pages/reg/reg",
+    "pages/mycomment/mycomment",
+    "pages/createcomment/createcomment",
+    "pages/commentdetail/commentdetail",
+    "pages/updatecomment/updatecomment",
+    "pages/firstlogin/firstlogin"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f54449",
+    "navigationBarTitleText": "别野网 一 去别野，换生活",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#f54449",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/images/icons/index.png",
+        "selectedIconPath": "/static/images/icons/index-active.png"
+      },
+      {
+        "pagePath": "pages/consult/consult",
+        "text": "咨询",
+        "iconPath": "/static/images/icons/consult.png",
+        "selectedIconPath": "/static/images/icons/consult-active.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "/static/images/icons/order.png",
+        "selectedIconPath": "/static/images/icons/order-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/static/images/icons/my.png",
+        "selectedIconPath": "/static/images/icons/my-active.png"
+      }
+    ]
+  }
+}

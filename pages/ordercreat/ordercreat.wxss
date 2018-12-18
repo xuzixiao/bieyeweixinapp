@@ -1,0 +1,173 @@
+.ordercreat{
+  padding: 0 5px;
+}
+.ordercreat .villaInfo{
+  width: 96%;
+  height: auto;
+  display: flex;
+  display: -webkit-flex;
+  margin-top: 5px;
+  box-shadow: 0 0 5px rgba(0,0,0,.2);
+  padding: 5px 2%;
+  border-radius: 3px;
+}
+.ordercreat .villaInfo .villaimg{
+  width: 30%;
+  height: auto;
+}
+.ordercreat .villaInfo .villaimg image{
+  display: block;
+  width: 100%;
+  height: 150rpx;
+}
+.ordercreat .villaInfo .villatxt{
+  width: 65%;
+  margin-left: 2%;
+}
+.villatxt text{
+  display: block;
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ruzhudateInfo{
+  width: 100%;
+  height: 120rpx;
+}
+.ruzhudateInfo {
+box-shadow: 0 0 5px rgba(0,0,0,.2);
+margin: 5px 0px;
+border-radius: 3px;
+display: flex;
+display: -webkit-flex;
+justify-content: space-between;
+}
+.startdate,.enddate{
+  width: 40%;
+  height: 120rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+.center{
+  width: 20%;
+  height: 120rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #999999;
+  font-size: 60rpx;
+}
+.date{
+  display: block;
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 34rpx;
+  color: #333333;
+}
+.tit{
+  display: block;
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #666666;
+}
+
+.orderinfo{
+  box-shadow: 0 0 5px rgba(0,0,0,.2);
+  border-radius: 3px;
+ margin-top: 5px;
+}  
+.orderinfo .orderline{
+  height: 90rpx;
+  line-height: 90rpx;
+  padding: 0 5px;
+}
+.orderinfo .orderline text{
+  font-size: 30rpx;
+  line-height: 90rpx;
+}
+.price{
+  float: right;
+  text-align: right;
+  color: #f54449;
+}
+.ruzhunum{
+float: right;
+display: flex;
+margin-top: 15rpx;
+}
+.ruzhunum button{
+  display:block;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 30rpx;
+  line-height: 50rpx;
+  text-align: center;
+  background:none;
+  border: none;
+  color: #f54449;
+  padding: 0px!important;
+  margin: 0px 0px 0px!important;
+  font-size: 50rpx;
+}
+.ruzhurenshu{
+  display:block;
+  width: 50rpx;
+  height: 50rpx;
+  line-height: 50rpx!important;
+}
+.ruzhunum button image{
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+}
+.ruzhunum text{
+  display: inline-block;
+  width: 50rpx!important;
+  line-height: 50rpx;
+  text-align: center;
+}
+.username,.tel,.idcard{
+  width: 300rpx;
+  float: right;
+  border:rgba(0,0,0,.2) solid 1px;
+  height: 60rpx;
+  padding: 0 5rpx;
+  border-radius: 4rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+}
+.orderxieyi{
+width: 100%;
+height: 100rpx;
+line-height: 100rpx;
+}
+.sublimtorder{
+  background: #f54449;
+  color: #ffffff;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  width: 60%;
+  margin: 0 20%;
+}
+.orderxieyi .checkbox{
+  font-size: 30rpx;
+}
+.xieyi{
+  color: #f54449;
+  padding: 0 5px;
+  font-size: 30rpx;
+}
+.days{
+  font-size: 30rpx;
+  border-bottom:#999999 solid 1px;
+  overflow: hidden;
+  border-radius: 15rpx;
+  padding: 5rpx 20rpx;
+}

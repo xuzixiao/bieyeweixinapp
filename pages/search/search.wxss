@@ -1,0 +1,133 @@
+/* pages/search/search.wxss */
+
+page{
+  background-color: #f6f8fa;
+}
+.searchHead{
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  border-bottom: 1px solid #e3e3e3;
+  display: flex;
+  display: -webkit-flex;
+  z-index: 999;
+}
+.searchHead view{
+  display:inline-block;
+  width: 25%;
+  height: 100rpx;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  text-align: center;
+  position: relative;
+}
+.searchHead view text{
+  font-size: 25rpx;
+}
+.searchHead view .tap{
+    display:block;
+    width:0;
+    height:0;
+    border-width:3px 3px 3px 0;
+    border-style:solid;
+    border-color:  transparent  transparent #333;/*透明 黄 透明 透明 */
+    position:absolute;
+    bottom:30rpx;
+    right:30rpx;
+    transform: rotate(-90deg);
+}
+.searchBox{
+  width: 100%;
+  height: auto;
+  margin-top: 110rpx;
+}
+.villa-Logo{
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.villa-Logo image{
+  width: 100%;
+}
+.villa-list{
+  background: #fff;
+  margin-bottom: 5px;
+}
+.villa-Logo .price{
+  position: absolute;
+  left: 0px;
+  bottom: 7px;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  padding:5px;
+  font-size: 40rpx;
+}
+.villa-title{
+  width: 96%;
+  height: auto;
+  margin: 0 2%;
+}
+.villa-title .title{
+  display:block;
+  width: 100%;
+  height: 80rpx;
+  line-height: 70rpx;
+  font-size: 36rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.villa-title .tag{
+  display:block;
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+}
+.loadmore{
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  text-align: center;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+}
+.loadmore text{
+  display:inline-block;
+  width: auto;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+.loadmore image{
+  display: inline-block;
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  margin: 20rpx 5rpx;
+  padding: 0px;
+}
+.nothave image{
+  display: block;
+  width: 400rpx;
+  height: 400rpx;
+  margin: 0 auto;
+  opacity: 0.8;
+}
+.nothave text{
+  display: block;
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 35rpx;
+  color: #8a8a8a;
+  text-shadow: 0px 0px 3px rgba(0,0,0,0.2);
+}
+

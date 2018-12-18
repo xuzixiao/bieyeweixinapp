@@ -1,0 +1,30 @@
+/* pages/sort/sort.wxss */
+.sortbox{
+  margin: 0 15px;
+}
+.sortbox view{
+  border-bottom: 1px solid #e3e3e3;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+}
+.sortbox view text{
+  line-height: 80rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+}
+
+.sortbox view .check{
+  padding-right: 10px;
+  font-weight: bold;
+  display: none;
+}
+
+.sortbox .active text{
+  color: #f54449;
+}
+.sortbox .active .check{
+  display: block;
+}
+
+

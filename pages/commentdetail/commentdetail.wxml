@@ -1,0 +1,77 @@
+<view class='comment'>
+
+<view class='comment-pro'>
+  <view class="pro-logo">
+    <image src='{{product.orderprologo}}'></image>
+  </view>
+  <view class="pro-con">
+    <text>{{product.Name}}</text>
+    <text>{{order.StartTime}}至{{order.EndTime}}</text>
+    <text>订单金额：{{order.PayTotal}}</text>
+  </view>
+</view>
+   
+<view class='comment-text'>
+  <view class='title'>评论状态：<text class='status'>{{order.DiscussStatetext}}</text> </view>
+</view>
+
+<view class='pingfen'>
+  <view class='fentit'>总体评价</view>
+  <view class='totalscore'>
+  <scroe score="{{comment.wholescore}}">
+  </scroe>
+  </view>
+
+  <view class='ruzhupingfen'>
+    <text>设施装修</text>
+    <scroe  score="{{comment.facscore}}">
+    </scroe>
+  </view>
+
+  <view class='ruzhupingfen'>
+    <text>整洁卫生</text>
+    <scroe  score="{{comment.Hygienescore}}">
+    </scroe>
+  </view>
+
+  <view class='ruzhupingfen'>
+    <text>管理服务</text>
+    <scroe score="{{comment.serviscore}}">
+    </scroe>
+  </view>
+</view>
+
+<view class='comment-text'>
+  <view class='title'>评论内容</view>
+  <view class='ment'>
+  
+  <view class='content'>{{comment.Content}}</view>
+
+  <view class='uploadimgs'>
+      <image wx:for="{{comment.Imgs}}" src='{{item}}' wx:key="" bindtap='handleimgs'></image>  
+      <!-- <image src='/static/images/icons/uploadimg.svg' class='uploadimg' bindtap='uploadimages' ></image> -->
+  </view>
+
+  </view>
+</view>
+
+<view class='comment-text' wx:if="{{comment.answer!=null}}">
+  <view class='title'>评论回复</view>
+   <view class='ment answercon'>
+   {{comment.answer}}
+   </view>
+</view>
+
+<view class='submit'>
+    <button bindtap='updatecomment' wx:if="{{order.DiscussState==3}}">前往修改评论</button>
+</view>
+
+<view class='watchimgs' wx:if="{{showplimgs}}">
+<view class='closewatch' bindtap='closewatch'>《 返回</view>
+  <view class='imageitem' wx:for="{{comment.Imgs}}" wx:key="">
+    <!-- <view class='delplimg' bindtap='delthisimg' data-indexnum='{{index}}'><image src='/static/images/icons/del.svg'></image></view> -->
+    <image src='{{item}}' mode='widthFix'></image>
+  </view>
+</view>
+
+</view>

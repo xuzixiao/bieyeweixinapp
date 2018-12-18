@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<view class="page">
+  <view class='banner'>
+    <swiper indicator-dots="{{banner.indicatorDots}}" autoplay="{{banner.autoplay}}" interval="{{banner.interval}}" duration="{{banner.duration}}" indicator-color="{{banner.indicatorColor}}" indicator-active-color="{{banner.indicatorActiveColor}}">
+      <block>
+        <swiper-item wx:for="{{banner.imgsrc}}" wx:key="key">
+          <image src='{{item}}'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class='search'>
+    <view class='searchcon'>
+      <view class='choseaddres'>
+        <input class='input' type='text' disabled='true' placeholder='选择目的地' placeholder-class="declass" value='{{cityInfo.cityname}}' bindtap="address" />
+        <button class='getaddres' bindtap='getLocation'>
+          <image class="position-icon" src='/static/images/icons/position1.png'></image>
+          <text>当前城市</text>
+        </button>
+      </view>
+      <view class='chosedate' bindtap='choosedate'>
+        <input class='date startdate' placeholder='入住日期' disabled='true' value='{{chosedate.startdate}}' placeholder-class="date-declass"></input>
+        <text class='days'>{{chosedate.diffday==undefined?0:chosedate.diffday}}晚</text>
+        <input class='date enddate' placeholder='离开日期' disabled='true'  value='{{chosedate.enddate}}' placeholder-class="date-declass"></input>
+      </view>
+      <view class='gotosearch'>
+        <button class='search' bindtap='gosearch'>查找美墅</button>
+      </view>
+    </view>
+  </view>
+  <view class="citys">
+    <text class='citys-title'>别野网主营城市</text>
+    <scroll-view class='city-mian'  scroll-x="true">
+
+      <view class="scroll-view-item" wx:for="{{MainCity}}" wx:key="key" bindtap='gotocitysearch' data-PartitionID='{{item.PartitionID}}' data-cityname='{{item.CityName}}' >
+        <image src='{{item.ImgUrl}}'></image>
+      </view>
+      
+    </scroll-view>
+  </view>
+</view>

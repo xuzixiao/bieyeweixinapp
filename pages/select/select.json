@@ -1,0 +1,9 @@
+{
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "筛选",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "priceslide": "/component/priceslide/pricesilde"
+  }
+}

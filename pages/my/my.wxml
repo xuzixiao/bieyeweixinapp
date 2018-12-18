@@ -1,0 +1,50 @@
+<view class='center'>
+
+<view class='top'>
+<image class='bg' src='../../static/images/Usercenter.jpg'></image>
+<view class='zhezhao'></view>
+<view class='userinfo'>
+<view class='userheadimg'>
+  <image class='morenheadimg' src='../../static/images/headimg.png'></image>
+  <image class='headimg' src='{{userInfo.use_img}}'></image>
+</view>
+  <text class='login-in' bindtap='login' wx:if="{{!login}}">登陆/注册</text>
+  <text class='username'>{{userInfo.username}}</text>
+</view>
+</view>
+
+<view class='main'>
+  <view class='menulist'>
+    <navigator url="/pages/order/order" open-type="switchTab" hover-class="navigator-hover">
+        <image src='../../static/images/icons/order.png'></image><text>我的订单</text>
+    </navigator>
+  </view>
+
+  <view class='menulist'>
+    <navigator url="/pages/mycomment/mycomment" hover-class="navigator-hover">
+      <image src='../../static/images/icons/edit.svg'></image><text>我的评论</text>
+    </navigator>
+  </view>
+
+    <button class='menulist' open-type="contact">
+       <image src='../../static/images/icons/xiaoxi.svg'></image><text>我的消息</text>
+    </button>
+
+  <!-- <view class='menulist'>
+    <image src='../../static/images/icons/xiaoxi.svg'></image><text>我的消息</text>
+  </view> -->
+
+</view>
+
+<view class='outlogin' wx:if="{{login}}">
+<button bindtap='outlogin'>退出登陆</button>
+</view>
+
+
+</view>
+
+
+
+
+
+

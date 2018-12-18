@@ -1,0 +1,163 @@
+<!--pages/detail/detail.wxml-->
+<view class='detail'>
+  <view class='debanbox' style="width:{{imageWidth}}px;height:{{imageHeight}}px;">
+    <swiper class='detailBan' style='height:{{imageHeight}}px' bindchange="swiperChange" autoplay="auto">
+      <block>
+        <swiper-item wx:for="{{detailBan}}" wx:key="key">
+          <image src='{{item.banner}}' bindload="imageLoad" style="width:{{imageWidth}}px;height:{{imageHeight}}px;"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='bannernav'>
+      <text>{{current}}</text>
+      <text>/</text>
+      <text>{{detailBan.length}}</text>
+    </view>
+    <view class='price'>￥{{detaildata.Product.Price}}</view>
+  </view>
+
+  <text class='detail-title'>{{detaildata.Product.Name}}</text>
+<!--别墅标签-->
+  <view class='villatype'>
+    <view>
+      <image src="/static/images/icons/icon-dudong.svg "></image>
+      <text>{{detaildata.Product.product_type}}</text>
+    </view>
+    <view>
+      <image src="/static/images/icons/icon-room.svg"></image>
+      <text>{{detaildata.Product.BedRoom}}室{{detaildata.Product.BathRoom}}卫</text>
+    </view>
+    <view>
+      <image src="/static/images/icons/icon-people.svg"></image>
+      <text>宜住{{detaildata.Product.Customer}}人</text>
+    </view>
+  </view>
+
+<!-- 设备设施 -->
+  <view class='detail-section'>
+    <view class='sectionTit'>综合设施</view>
+    <view class='sectionCon'>
+     <view class='sbss' v-if="{{Facilities.length>0}}">
+        <text class='tit'>设施</text>
+        <view class='sbssmain'>
+            <view wx:for="{{Facilities}}" wx:key="key"><text class="iconfont {{item.class}}"></text> <text>{{item.name}}</text> </view>
+        </view>
+     </view>
+
+      <view class='sbss' v-if="{{FreeService.length>0}}">
+        <text class='tit'>服务</text>
+        <view class='sbssmain server'>
+            <text class='serverL' wx:for="{{FreeService}}" wx:key="key">{{item}}</text>
+            <view class='clear'></view>
+        </view>
+     </view>
+
+
+
+    </view>
+  </view>
+
+
+<!-- 别墅简介 -->
+  <view class='detail-section'>
+    <view class='sectionTit'>别墅简介</view>
+    <view class='sectionCon'>
+      <text>{{Superiority}}</text>
+    </view>
+  </view>
+<!-- 房屋详情 -->
+  <view class='detail-section'>
+    <view class='sectionTit'>房屋详情</view>
+    <view class='sectionCon'>
+      <text>{{Special}}</text>
+    </view>
+  </view>
+<!-- 入住须知 -->
+  <view class='detail-section'>
+    <view class='sectionTit'>入住须知</view>
+    <view class='sectionCon'>
+
+
+<!-- <view class='roominorout'>
+    <view>
+        <text class='linetop'>最早入住时间</text>
+        <text class='linebtm'>当天{{check_prompt[0]}}</text>
+    </view>
+
+    <view>
+        <text class='linetop'>最早退房时间</text>
+        <text class='linebtm'>当天{{check_prompt[1]}}</text>
+    </view>
+    
+    <view>
+        <text class='linetop'>接待时间</text>
+        <text class='linebtm'>{{check_prompt[2]}}</text>
+    </view>
+</view> -->
+      <text>{{check_prompt}}</text>
+      <text>入住押金：{{detaildata.Product.deposit}}</text>
+    </view>
+  </view>
+<!--服务费用-->
+  <view class='detail-section' wx:if="{{service_charge.length!=0}}">
+    <view class='sectionTit'>服务费用</view>
+    <view class='sectionCon'>
+      <text wx:for="{{service_charge}}" wx:key="key">{{item}}</text>
+
+    </view>
+  </view>
+<!--温馨提示-->
+  <view class='detail-section' wx:if="{{warmthtips!=''}}">
+    <view class='sectionTit'>温馨提示</view>
+    <view class='sectionCon'>
+      <text>{{warmthtips}}</text>
+    </view>
+  </view>
+<!--房屋位置-->
+  <view class='detail-section map'>
+    <view class='sectionTit'>房屋位置</view>
+    <view class='sectionCon'>
+      <map
+       id='location'
+       latitude="{{map.latitude}}"
+       longitude="{{map.longitude}}"
+       markers="{{map.markers}}"
+      ></map>
+      <view class='go-location'>
+      <text id='address'>{{map.desc}}</text>
+      <text bindtap='golocation' id='golocalbtn'>导航</text>
+      </view>
+    </view>
+  </view>
+
+<!--温馨提示-->
+  <view class='detail-section commentview'>
+    <view class='sectionTit'>房屋评价     
+      <navigator url='/pages/comment/comment?ProductID={{detaildata.Product.ProductID}}' class='comments'> 查看评价</navigator>
+     </view>
+  </view>
+
+    <view class='detail-section commentview'>
+    <view class='sectionTit'>查看房态     
+      <navigator url='/pages/date/date?villaid={{detaildata.Product.ProductID}}' class='comments'>查看房态</navigator>
+     </view>
+  </view>
+
+
+</view>
+
+
+<cover-view class='reserve'>
+
+<cover-view class='date' bindtap='getruzhudate'>
+  <cover-view class='ruzhutuifang'>入住：{{Startdate}}</cover-view>
+  <cover-view class='ruzhutuifang'>退房：{{Enddate}}</cover-view>
+</cover-view>
+
+<cover-view class='ydbtn' bindtap='placeOrder'>立即预定</cover-view>
+
+</cover-view>
+
+
+
+

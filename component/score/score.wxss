@@ -1,0 +1,27 @@
+/* component/score/score.wxss */
+.score{
+  width: 300rpx;
+  height: 60rpx;
+  position: relative;
+  overflow:hidden;
+}
+.start{
+  width: 300rpx;
+  height: 60rpx;
+  position: absolute;
+}
+.start image,.top image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 10rpx;
+}
+.top{
+  position: absolute;
+  z-index: 10;
+}
+.bottom{
+  position: absolute;
+  z-index: 5;
+}
+
+

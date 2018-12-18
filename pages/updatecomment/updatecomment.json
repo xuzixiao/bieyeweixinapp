@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "scroe": "/component/score/score"
+  }
+}

@@ -1,0 +1,32 @@
+<view class='comment'>
+  <view class='nothave' wx:if="{{commentlist.length==0}}">
+    <image src='../../static/images/icons/edit.svg'></image>
+    <text>暂无评论信息...</text>
+  </view>
+
+<view class='mycommentlist' wx:if="{{commentlist.length!=0}}">
+
+  <view class='comment-item' wx:for="{{commentlist}}" wx:key="" wx:for-item="comment" data-DiscussState='{{comment.DiscussState}}'  data-commentID='{{comment.commentID}}' data-OrderID='{{comment.OrderID}}' data-index='{{index}}'     bindtap='gotonext'>
+        <view class='top'>
+          <image src='{{comment.Logo}}' mode='widthFix'></image>
+          <view class='status'>{{comment.DiscussStatetext}}</view>   
+        </view>
+        <view class='bottom'>
+          <view class='title'>{{comment.Name}}</view>
+          <view class='date'>入离时间：{{comment.StartTime}}—{{comment.EndTime}}</view>
+        </view>
+  </view>
+
+</view>
+
+
+<view class='loadmore' wx:if="{{commentlist.length!=0 && concat}}">
+  <image src='../../static/images/icons/loading.gif'></image>
+  <text>加载更多</text>
+</view>
+
+<view class='loadmore' wx:if="{{commentlist.length!=0 && !concat}}">
+  <text>已加载全部</text>
+</view>
+
+</view>

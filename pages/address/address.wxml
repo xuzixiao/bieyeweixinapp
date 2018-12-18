@@ -1,0 +1,10 @@
+<!--pages/address/address.wxml-->
+<view class='page choosecitys'>
+<text class='city-title'>别野网主营城市</text>
+<view class='citylist'>
+  <ul>
+    <li data-city="" data-PartitionID="" bindtap="submitcity">不限</li>
+    <li wx:for="{{MainCity}}" wx:key="key" data-city="{{item.CityName}}" data-PartitionID="{{item.PartitionID}}" bindtap="submitcity">{{item.CityName}}</li>
+  </ul>
+</view>
+</view>

@@ -1,0 +1,86 @@
+<!--pages/order/order.wxml-->
+<view class='order'>
+
+  <view class='order-tab'>
+    <text class='{{orderstatus==1?"active":""}}' data-status='1' bindtap='changetab'>进行中</text>
+    <text class='{{orderstatus==2?"active":""}}' data-status='2' bindtap='changetab'>已完成</text>
+  </view>
+
+  <!-- 进行中订单 -->
+  <view class='order-list' wx:if="{{orderstatus==1}}">
+    <view class='order-item' wx:for="{{orderlist}}" wx:key="" wx:if="{{orderlist.length!=0}}">
+      <navigator url='../../pages/orderdetail/orderdetail?orderno={{item.OrderNo}}'>
+        <view class='orderlogo'>
+          <image src='{{item.ziplogo}}' mode="center"></image>
+        </view>
+
+        <view class='order-title'>
+          <text class='villName'>{{item.Name}}</text>
+          <text class='orderstatus'>{{item.OrderStateText}}</text>
+        </view>
+        <view class='order-date'>
+          <text>{{item.StartTime}}</text>
+          <text class='zhi'>至</text>
+          <text>{{item.EndTime}}</text>
+          <text class='zhi'></text>
+          <text>共{{item.ReserveDays}}晚</text>
+        </view>
+        <view class='order-paynum'>订单总额：￥{{item.PayTotal}}</view>
+      </navigator>
+    </view>
+
+    <view class='loadmore' wx:if="{{ordermarchhave&&orderlist.length!=0}}">
+      <image src='../../static/images/icons/loading.gif'></image>
+      <text>加载更多订单</text>
+    </view>
+    <view class='loadmore' wx:if="{{!ordermarchhave&&orderlist.length!=0}}">
+      <text>已加载全部</text>
+    </view>
+    <view class='nothave order-item' wx:if="{{orderlist.length==0}}">
+      <image src='../../static/images/icons/order.png'></image>
+      <text>暂无此类订单</text>
+    </view>
+  </view>
+
+  <!-- 已结束的订单 -->
+  <view class='order-list' wx:if="{{orderstatus==2}}">
+    <view class='order-item' wx:for="{{finishorderlist}}" wx:key="" wx:if="{{finishorderlist.length!=0}}">
+      <navigator url='../../pages/orderdetail/orderdetail?orderno={{item.OrderNo}}'>
+        <view class='orderlogo'>
+          <image src='{{item.ziplogo}}' mode="center"></image>
+        </view>
+
+        <view class='order-title'>
+          <text class='villName'>{{item.Name}}</text>
+          <text class='orderstatus'>{{item.OrderStateText}}</text>
+        </view>
+        <view class='order-date'>
+          <text>{{item.StartTime}}</text>
+          <text class='zhi'>至</text>
+          <text>{{item.EndTime}}</text>
+          <text class='zhi'></text>
+          <text>共{{item.ReserveDays}}晚</text>
+        </view>
+        <view class='order-paynum'>订单总额：￥{{item.PayTotal}}</view>
+      </navigator>
+    </view>
+
+    <view class='loadmore' wx:if="{{orderfinishhave&&finishorderlist.length!=0}}">
+      <image src='../../static/images/icons/loading.gif'></image>
+      <text>加载更多订单</text>
+    </view>
+
+    <view class='loadmore' wx:if="{{!orderfinishhave&&finishorderlist.length!=0}}">
+      <text>已加载全部</text>
+    </view>
+
+
+    <view class='nothave order-item' wx:if="{{finishorderlist.length==0}}">
+      <image src='../../static/images/icons/order.png'></image>
+      <text>暂无此类订单</text>
+    </view>
+
+
+  </view>
+
+</view>

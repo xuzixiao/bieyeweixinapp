@@ -1,0 +1,240 @@
+/* pages/detail/detail.wxss */
+.detail{
+  width: 100%;
+  height: auto;
+  padding-bottom: 120rpx;
+}
+.debanbox{
+  width: 100%;
+  position: relative; 
+} 
+.sbss .tit{
+  font-weight: bold;
+}
+.bannernav{
+  width: 100%;
+  height: 60rpx;
+  line-height:60rpx;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+.bannernav text{
+color: #fff;
+font-size: 26rpx;
+line-height: 60rpx;
+}
+.price{
+  position: absolute;
+  left: 0px;
+  bottom: 30rpx;
+  background: rgba(0, 0, 0, .5);
+  color: #fff;
+  padding: 5rpx 20rpx;
+}
+.detail-title{
+  display: block;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin: 0 15rpx;
+  border-bottom: #cccccc solid 1px;
+  font-size: 34rpx;
+}
+.villatype{
+  margin:10px 10px 5px;
+  display: flex;
+  display: -webkit-flex;
+  border-bottom: #cccccc dashed 1px;
+}
+.villatype view image{
+  display:block;
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0 auto;
+}
+.villatype view text{
+  display: block;
+  width: 100%;
+  height: 60rpx;
+  font-size: 24rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #666;
+}
+.villatype view{
+  width: 120rpx;
+  height: 120rpx;
+  display: inline-block;
+}
+.detail-section{
+  margin: 0 10px;
+  border-bottom: #cccccc dashed 1px;
+  padding-bottom: 10px;
+}
+.detail-section .sectionTit{
+  font-size: 30rpx;
+  line-height: 60rpx;
+  color: #666;
+  font-weight: bold;
+  display: flex;
+  display: -webkit-flex;
+  justify-content:space-between;
+}
+.detail-section .sectionCon text{
+  font-size:14px;
+  line-height:30px;
+  display:block;
+  width:100%;
+  color:#666;
+  overflow:hidden;
+}
+.map .sectionCon{
+  width: 100%;
+  height: auto;
+
+}
+#location{
+width: 100%;
+height: 400rpx;
+}
+.reserve{
+  width: 100%;
+  height: 100rpx;
+  background:#f93939;
+  color: #fff;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 34rpx;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  z-index: 9999999;
+}
+.comments{
+  display: inline-block;
+  color: #f93939;
+  font-size: 26rpx;
+  font-weight: normal;
+  padding-right: 10rpx;
+}
+.commentview{
+  padding-bottom: 0px;
+}
+.sbssmain{
+  width: 100%;
+}
+.sbssmain view{
+  display: inline-block;
+  width: 25%;
+}
+.sbssmain view .iconfont{
+  font-size: 36rpx;
+  text-align: center;
+}
+.sbssmain view text{
+  text-align: center;
+  font-size: 30rpx;
+  height: 30px;
+  overflow:hidden;
+}
+.server{
+  width: 100%;
+}
+.server .serverL{
+  width: 33%!important;
+  height: 60rpx;
+  float: left;
+  text-align: left;
+}
+.clear{
+  clear: both;
+}
+.commentview .sectionTit{
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.go-location{
+  display: flex;
+  justify-content: space-between;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.go-location text{
+  text-align: left;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+#golocalbtn{
+  line-height: 100rpx;
+  text-align: right;
+  color: #f93939;
+}
+#address{
+  line-height: 100rpx;
+  text-align: left;
+  overflow: hidden;
+}
+.roominorout{
+  width: 100%;
+  height: 140rpx;
+  background: #666;
+  display: flex;
+  display: -webkit-flex;
+  justify-content:center;
+  border-radius: 4px;
+}
+.roominorout view{
+  width: 33.3%;
+  height: 140rpx;
+  display: inline-block;
+}
+.roominorout view text{
+  text-align: center;
+  line-height: 60rpx;
+}
+.linetop{
+  color: #fff!important;
+  font-size: 26rpx!important;
+}
+.linebtm{
+  color: #fff!important;
+  font-size: 30rpx!important;
+}
+.yuding{
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+.reserve{
+  display: flex;
+  display: -webkit-flex;
+  border-top: #cccccc solid 1px;
+}
+.reserve .date{
+  width: 40%;
+  height: 100rpx;
+  background: #fff;
+}
+.reserve .date{
+  width: 40%;
+  height: 100rpx;
+  background: #fff;
+}
+.ruzhutuifang{
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #666;
+  text-align: center;
+  font-size: 26rpx;
+}
+.ydbtn{
+  width: 60%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 34rpx;
+}

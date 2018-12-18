@@ -1,0 +1,41 @@
+<!--pages/comment/comment.wxml-->
+<view class='comment'>
+
+  <view class='nothave' wx:if="{{commentlist.length==0}}">
+    <image src='../../static/images/icons/edit.svg'></image>
+    <text>暂无评论信息...</text>
+  </view>
+
+  <view wx:if="{{commentlist.length!=0}}">
+    <view class='commentlist' wx:for="{{commentlist}}" wx:key="" wx:for-item="commemtdata">
+      <view class='comment-logo'>
+        <image src='{{commemtdata.use_img}}'></image>
+      </view>
+      <view class='comment-main'>
+        <view class='username'>{{commemtdata.username}}</view>
+        <view class='date'>{{commemtdata.CreateDate}}</view>
+        <view class='score'>{{commemtdata.wholescore}}分</view>
+        <text class='commenttext'>{{commemtdata.Content}}</text>
+        <view class='commentimg' wx:if="{{commemtdata.Imgs.length!=0}}">
+          <image wx:for="{{commemtdata.Imgs}}" wx:key="" src='{{item}}' bindtap='showbigimg' data-imgarr='{{commemtdata.Imgs}}' data-index='{{index}}'></image>
+        </view>
+        <view class='answer' wx:if="{{commemtdata.answer!=''}}">
+          <view class='answertit'>房东回复：</view>
+          <view class='answercon'>{{commemtdata.answer}}</view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+<view class='showbigimg' wx:if="{{plbigimg.length!=0}}">
+  <view class='close'>
+    <image src='../../static/images/icons/close.svg' bindtap='closebigimg'></image>
+  </view>
+  <view class='plimgs'>
+    <image wx:for="{{plbigimg}}" wx:key="" src='{{item}}' mode='widthFix'></image>
+  </view>
+</view>
+
+
+</view>

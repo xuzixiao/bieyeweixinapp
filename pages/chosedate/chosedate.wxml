@@ -1,0 +1,36 @@
+<view class='chosedate'>
+  <view class='weeks'>
+    <text>日</text>
+    <text>一</text>
+    <text>二</text>
+    <text>三</text>
+    <text>四</text>
+    <text>五</text>
+    <text>六</text>
+  </view>
+
+  <view class='date-body'>
+    <view class='date-mouth' wx:for="{{calendardata}}" wx:key="key" wx:for-item="m">
+      <view class='mouth-title'>{{m.year}}年{{m.mouth}}月</view>
+      <view class='days'>
+       <view wx:for="{{m.firstweek}}" wx:key="key"></view>
+       <view class="dateitem {{d.expire?'expire':''}}" wx:for="{{m.date}}" wx:key="key" wx:for-item="d" data-expire='{{d.expire}}' data-date="{{m.year}}-{{m.mouth}}-{{d.day}}" bindtap='choosedate'>
+       <text class="dateday {{d.check==1?'ruzhu':''}} {{d.check==2?'tuifang':''}} {{d.check==3?'ingtext':''}}">{{d.day}}</text>
+       <view wx:if="{{d.check==1}}" class='inorout'>入住</view>
+       <view wx:if="{{d.check==2}}" class='inorout'>退房</view>
+       <view wx:if="{{d.check==3}}" class='ing'></view>
+       </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='confirm'>
+  <view class='datebox'>
+  <view>{{startdate}}</view>
+  <view>共{{diffday}}晚</view>
+  <view>{{enddate}}</view>
+  </view>
+    <button bindtap='getDate'>确定</button>
+  </view>
+
+</view>

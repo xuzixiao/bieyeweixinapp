@@ -1,0 +1,46 @@
+<!--pages/login/login.wxml-->
+<view class='login'>
+
+<view class='tab'>
+  <view class='{{logintype==1?"active":""}}' data-logintype='1' bindtap='changetab'>账号密码登陆</view>
+  <view class='{{logintype==2?"active":""}}' data-logintype='2' bindtap='changetab'>手机验证码登陆</view>
+</view>
+
+<view class='loginmain pwdgetin' wx:if="{{logintype==1}}">
+  <view class='loginline'>
+    <image src='../../static/images/icons/tel.svg'></image>
+    <input placeholder='请输入您的手机号' bindinput='tel' ></input>
+  </view>
+  <view class='loginline'>
+    <image src='../../static/images/icons/pwd.svg'></image>
+    <input placeholder='请输入您的密码' bindinput='pwd'></input>
+  </view>
+</view>
+
+<view class='loginmain yzmgetin' wx:if="{{logintype==2}}">
+
+  <view class='loginline'>
+    <image src='../../static/images/icons/tel.svg'></image>
+    <input placeholder='请输入您的手机号' bindinput='yzmtel'></input>
+  </view>
+  <view class='loginline'>
+    <image src='../../static/images/icons/yzm.svg'></image>
+    <input placeholder='输入手机验证码' bindinput='yzm'></input>
+    <button  class='code' bindtap='getyzm' disabled="{{getyzmstatus}}">{{getyzmtext}}</button>
+  </view>
+
+
+
+</view>
+
+<view class='loginIn'>
+  <button bindtap='logoin'>登陆</button>
+  <view class='other'>
+    <view class='line'></view>
+    <view class='line-text'>或</view>
+  </view>
+  <button class='weixinlogin' open-type="getUserInfo" bindgetuserinfo="userinfor"><image src='../../static/images/icons/weixin.svg'></image><text>微信授权登陆</text></button>
+  <!-- <button bindtap='goreg' class='weixinlogin'>注册</button> -->
+</view>
+
+</view>

@@ -1,0 +1,94 @@
+<!--pages/ordercreat/ordercreat.wxml-->
+<view class='ordercreat'>
+
+  <view class='villaInfo'>
+    <view class='villaimg'>
+      <image src='{{Logo}}'></image>
+    </view>
+    <view class='villatxt'>
+      <text>{{product.Name}}</text>
+      <text>{{product.product_type}}</text>
+      <text>{{product.BedRoom}}居/宜住{{product.Customer}}人</text>
+    </view>
+  </view>
+
+  <view class='ruzhudateInfo' bindtap='choosedate'>
+    <view class='startdate'>
+      <text class='date'>{{Startdate}}</text>
+      <text class='tit'>入住日期</text>
+    </view>
+    <view class='center'>
+    <text class='days'>{{diffday}}</text>
+    </view>
+    <view class='enddate'>
+      <text class='date'>{{Enddate}}</text>
+      <text class='tit'>退房日期</text>
+    </view>
+  </view>
+
+  <view class='orderinfo'>
+    <view class='orderline'>
+      <text>房租：</text>
+      <text class='price'>￥{{price}}</text>
+    </view>
+    <view class='orderline'>
+      <text>押金：</text>
+      <text class='price'>￥{{deposit}}</text>
+    </view>
+    <view class='orderline'>
+      <text>订单金额：</text>
+      <text class='price'>￥{{orderTotal}}</text>
+    </view>
+  </view>
+
+
+  <view class='orderinfo'>
+   <view class='orderline'>
+      <text>入住人数：</text>
+      <view class='ruzhunum'>
+        <button bindtap='subren'><image src='../../static/images/icons/sub.svg'></image></button>
+        <text class='ruzhurenshu'>{{ruzhurenshu}}</text>
+        <button bindtap='addren'><image src='../../static/images/icons/add.svg'></image></button>
+      </view>
+    </view>
+
+    <view class='orderline'>
+      <text>入住人姓名：</text>
+      <input class='username' bindinput='username'></input>
+    </view>
+
+    <view class='orderline'>
+      <text>手机号：</text>
+      <input class='tel' bindinput='tel'></input>
+    </view>
+
+    <view class='orderline'>
+      <text>身份证号：</text>
+      <input class='idcard' bindinput='idcard'></input>
+    </view>
+
+  </view>
+
+<view class='orderxieyi'>
+<checkbox-group bindchange="checkboxChange">
+    <label class="checkbox">
+        <checkbox value='1'  class='checkxieyi' />同意
+    </label>
+    <text class='xieyi' bindtap='goxieyi'>《别野服务协议》</text>
+</checkbox-group>
+
+</view>
+
+
+
+
+
+<button class='sublimtorder' bindtap='submitorder'>提交订单</button>
+<view>
+
+</view>
+
+
+
+
+</view>
